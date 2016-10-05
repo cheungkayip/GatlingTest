@@ -26,15 +26,32 @@
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>2.2.0</version>
                 <configuration>
-                    <jvmArgs>
-                        <jvmArg>-Durl=http://localhost:9000</jvmArg>
-                        <jvmArg>-DnumberOfUsers=10</jvmArg>
-                        <jvmArg>-DnumberOfRepetitions=1</jvmArg>
-                        <jvmArg>-DdurationMinutes=1</jvmArg>
-                        <jvmArg>-DpauseBetweenRequestsMs=3000</jvmArg>
-                        <jvmArg>-Ddebug=true</jvmArg>
-                    </jvmArgs>
+                    <dataFolder>src/test/resources/data</dataFolder>
+                    <resultsFolder>target/gatling/results</resultsFolder>
+                    <simulationsFolder>src/test/scala</simulationsFolder>
                 </configuration>
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>test1</id>-->
+                        <!--<phase>test</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>execute</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<simulationClass>GatlingGoogleTest</simulationClass>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>test2</id>-->
+                        <!--<phase>test</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>execute</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<simulationClass>test.scala.GatlingNaamNummerControle</simulationClass>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
             </plugin>
         </plugins>
     </build>
